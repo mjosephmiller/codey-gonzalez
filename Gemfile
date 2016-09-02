@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 gem 'jquery-turbolinks'
-gem 'selenium-webdriver'
 # Users
 gem 'devise'
 # GitHub Authentication
@@ -57,6 +56,10 @@ group :test do
   gem 'capybara'
   gem 'rspec-wait', '~> 0.0.8'
   gem 'selenium-webdriver'
+end
+
+group :development, :test do
+  gem 'jasmine'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

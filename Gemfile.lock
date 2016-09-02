@@ -85,6 +85,12 @@ GEM
       activesupport (>= 4.1.0)
     hashie (3.4.4)
     i18n (0.7.0)
+    jasmine (2.5.0)
+      jasmine-core (~> 2.5)
+      phantomjs
+      rack (>= 1.2.1)
+      rake
+    jasmine-core (2.5.0)
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -135,6 +141,7 @@ GEM
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
     pg (0.18.4)
+    phantomjs (2.1.1.0)
     pkg-config (1.1.7)
     poltergeist (1.10.0)
       capybara (~> 2.1)
@@ -258,6 +265,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   database_cleaner
   devise
+  jasmine
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks

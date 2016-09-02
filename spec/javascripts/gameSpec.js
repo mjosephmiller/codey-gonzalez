@@ -1,17 +1,22 @@
 describe('Game', function() {
 
-  // var markChar = markChar();
-
-  it('returns incorrect if a keystroke does not match the character', function() {
-    // var currentChar = 25;
-    // var keycode = 27;
-    onReady() ;
-    // pressedKey(keycode);
-    expect(markChar()).toBeA(Function);
-    // expect(markChar()).toEqual('incorrect');
+  it('calls startGame on first keystroke', function(){
+    // var e = $.Event('keydown');
+    //
+    // var triggerKeyDown = function (element, keyCode) {
+    //     var inputEl = element.find('input');
+    //     e.which = keyCode;
+    //     $(inputEl).trigger(e);
+    // };
+    // triggerKeyDown(window, 5);
+    // if(e.which === 5){
+    //   console.log('hellllloooooooooo, susaaaaaan!')
+    // }
+    var startGameSpy = jasmine.createSpy('start')
+    spyOn(Game, 'startGameSpy');
+    Game.toString();
+    Game.start();
+    expect(Game.start).toHaveBeenCalled();
   });
-
-
-
 
 });

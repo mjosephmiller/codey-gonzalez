@@ -1,4 +1,6 @@
-require 'spec_helper'
-
-describe 'Game', type: :model do
-end
+# require 'rails_helper'
+#
+# describe Game do
+#
+#
+# end
