@@ -1,28 +1,27 @@
-<div class="page-header">
-  <h1>Leaderboard <small>Highest Scores</small></h1>
-</div>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>User</th>
-      <th>Highest Score</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% count = 1 %>
-    <% @users_with_score = @users.select {|user| user.highest_score(user)} %>
-    <% @sorted = @users_with_score.sort_by {|user| user.highest_score(user)}.reverse%>
-    <% @sorted.each do |user| %>
-    <% if user.games.any? %>
-      <tr>
-        <th scope="row"><%= count %></th>
-        <td><%=user.email.split('@')[0]%></td>
-        <td><%= user.highest_score(user) %></td>
-      </tr>
-      <% count += 1 %>
-      <% end %>
-    <% end %>
-  </tbody>
-</table>
+<center>
+  <div class="page-header">
+    <h1>Leaderboard <small>Highest Scores</small></h1>
+  </div>
+
+  <div class="panel panel-default">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th class="head-field">#</th>
+          <th class="head-field">User</th>
+          <th class="head-field">Highest Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each_with_index do |user, index| %>
+          <tr>
+            <th class="index-row"><%= index + 1 %></th>
+            <td class="index-field"><%= user.email.split('@')[0]%></td>
+            <td class="index-field"><%= user.high_score %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</center>

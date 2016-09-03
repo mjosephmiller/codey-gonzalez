@@ -9,10 +9,6 @@ describe User do
     user.games.create_with_user({accuracy: 100, wpm: 40, score: 500, duration: 40}, user).save(validate: false)
     user.games.create_with_user({accuracy: 50, wpm: 20, score: 1000, duration: 20}, user).save(validate: false)
 
-    it "returns a users highest score" do
-      expect(subject.highest_score(user)).to eq 1000
-    end
-
   end
 
 end
