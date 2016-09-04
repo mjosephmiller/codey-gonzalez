@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Leaderboard <small>High Scores</small></h1>
+  <h1>Leaderboard <small>Highest Scores</small></h1>
 </div>
 
 <table class="table table-striped">
@@ -12,10 +12,10 @@
   </thead>
   <tbody>
     <% count = 1 %>
-    <% @sorted = [] %>
-    <% @sorted = @users.sort_by {|user| user.highest_score(user)}.reverse%>
+    <% @users_with_score = @users.select {|user| user.highest_score(user)} %>
+    <% @sorted = @users_with_score.sort_by {|user| user.highest_score(user)}.reverse%>
     <% @sorted.each do |user| %>
-      <% if user.games.any? %>
+    <% if user.games.any? %>
       <tr>
         <th scope="row"><%= count %></th>
         <td><%=user.email.split('@')[0]%></td>
@@ -26,7 +26,3 @@
     <% end %>
   </tbody>
 </table>
-
-<!-- <% @sorted = [] %>
-<% @sorted = @users.sort_by {|user| user.highest_score(user)}.reverse%>
-<%= @sorted %> -->

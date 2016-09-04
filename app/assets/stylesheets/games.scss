@@ -27,6 +27,19 @@ span.active {
   background-color: #2971d1;
 }
 
+span.active.return::before {
+  content: '\21B2';
+  color: white;
+  padding: 0 10px;
+}
+
+span.return.incorrect::before {
+  content: '\21B2';
+  color: white;
+  background-color: red;
+  padding: 0 10px;
+}
+
 #code {
   font-size: 2rem;
 }
