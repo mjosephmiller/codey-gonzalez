@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  
   has_many :games,
   -> { extending WithUserAssociationExtension },
   dependent: :destroy
@@ -14,14 +15,6 @@ class User < ApplicationRecord
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
     end
-  end
-
-  def highest_score(user)
-    scores = []
-    user.games.each do |game|
-      scores << game.score
-    end
-    return scores.sort.reverse[0]
   end
 
   def average_results(user)

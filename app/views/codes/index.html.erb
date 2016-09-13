@@ -1,0 +1,10 @@
+<% if user_signed_in? %>
+<center>
+  <h2>Pick a language</h2><br>
+  <% @codes.each do |code| %>
+  <%= link_to code.language, code_path(code), class: "btn btn-primary btn-lg" %><br><br>
+<% end %>
+</center>
+<% else %>
+  <%= render partial: "game" %>
+<% end %>

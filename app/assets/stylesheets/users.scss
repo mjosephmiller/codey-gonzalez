@@ -1,3 +1,37 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.table.table-striped {
+  width: 600px;
+  text-align: center;
+}
+
+.page-header {
+  text-align: center;
+}
+
+.panel.panel-default {
+  width: 600px;
+}
+
+.col-sm-3.text-left {
+  text-align: center;
+}
+
+.show-field {
+  width: 150px;
+}
+
+.head-field {
+  text-align: center;
+}
+
+.index-field {
+  width: 250px;
+}
+
+.index-row  {
+  width: 100px;
+  text-align: center;
+}

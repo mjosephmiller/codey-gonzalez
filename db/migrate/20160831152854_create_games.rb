@@ -5,7 +5,6 @@ class CreateGames < ActiveRecord::Migration[5.0]
       t.integer :duration
       t.integer :wpm
       t.integer :score
-      t.integer :code
 
       t.timestamps
     end
