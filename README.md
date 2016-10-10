@@ -1,6 +1,6 @@
 # Codey Gonzales
 
-A speed type racer for code
+A type racer aiming to improve coders' speed, accuracy and familiarity with best-practice formatting.
 
 Rspec init
 ```
